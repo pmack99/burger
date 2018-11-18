@@ -2,7 +2,7 @@
 
 
     <div class="row">
-        <div class="center col-sm12" >
+        <div class="center col-sm12">
             <img src="/public/assets/img/burger.png" alt="burger" height="300">
             <h1>Eat this tasty burger</h1>
         </div>
@@ -10,7 +10,7 @@
 
 
     <div class="row">
-        <div class="col-sm-6" id ="not eaten" >
+        <div class="col-sm-6" id="not eaten">
             <h1>Burgers Ordered</h1>
             <ul>
                 {{#each burgers}}
@@ -19,9 +19,9 @@
                     {{this.id}}
                     {{this.burger_name}}
 
-                    <form action="/{{this.id}}" ?_method=PUT" method="POST">
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
                         <input type="hidden" name="devoured" value="true">
-                        <button class="btn-primary" type="submit" id="devour_burger"> Devour it </button>
+                        <button type="submit" class="btn btn-outline-warning devour">Devour it!</button>
                     </form>
                 </li>
                 {{/unless}}
@@ -33,7 +33,7 @@
 
 
     <div class="row">
-        <div class="col-sm-6" id ="eaten" >
+        <div class="col-sm-6" id="eaten">
             <h2>Devoured burgers!</h2>
 
             <ul>
@@ -52,7 +52,7 @@
     <div class="row">
         <div class="col-sm-6" id="add_burger">
             <h2>Add a Burger</h2>
-            <form class="create-form" action = "/" method="POST">
+            <form class="create-form" action="/" method="POST">
 
                 <div class="form-group">
                     <p>Type in your favorite burger name and hit submit button</p>
