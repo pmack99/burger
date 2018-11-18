@@ -1,6 +1,6 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
-var routes = require("./controllers/burgers_controller.js");
+var router = require("./controllers/burgers_controller.js");
 var bodyParser = require("body-parser");
 
 var PORT = process.env.PORT || 8080;
@@ -16,7 +16,8 @@ app.use(express.json());
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-app.use(routes);
+
+app.use(router);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
