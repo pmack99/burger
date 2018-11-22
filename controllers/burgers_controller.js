@@ -14,22 +14,32 @@ router.get("/", function (req, res) {
     });
 });
 
-router.post("/", function (req, res) {
-    burger.createBurger([
-        "burger_name"
-    ], [
-            req.body.burger_name,
-        ], function (result) {
-            // Send back the ID of the new burger
-            res.json({ id: result.insertId });
+
+// router.post("/", function (req, res) {
+//     burger.createBurger([
+//         "burger_name", "devoured"
+//     ], [
+//             req.body.burger_name, req.body.devoured
+//         ], function (result) {
+//             // Send back the ID of the new burger
+//             res.json({ id: result.insertId });
            
-        
-        });
-});
+//         });
+// });
+
+router.post("/", function(req, res) {
+    burger.createBurger([
+      "burger_name"
+    ], [
+      req.body.burger_name
+    ], function() {
+      res.redirect("/");
+    });
+  });
 
 
 
-router.put('/burger/:id', function(req, res) {
+router.put("/:id", function(req, res) {
     var condition = 'id = ' + req.params.id;
   
     burger.devourBurger({
