@@ -1,0 +1,25 @@
+html {
+    background-color: #FFC04C;
+}
+
+body {
+    width: 75%;
+   margin: 0 auto; 
+
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   background-color: white;
+}
+
+h1 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 55px;
+    margin: 50px;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}

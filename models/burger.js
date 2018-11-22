@@ -18,6 +18,8 @@ var burger = {
     });
   },
 
+ 
+
 //devour function
   devourBurger: function(objColVals, condition, cb) {
     orm.devourBurger("burgers", objColVals, condition, function(res) {
