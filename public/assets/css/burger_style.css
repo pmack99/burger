@@ -1,14 +1,10 @@
-html {
-    background-color: #FFC04C;
-}
 
 body {
-    width: 75%;
+    width: 90%;
+    display: block;
    margin: 0 auto; 
    display: flex;
-   min-height: 100vh;
-   flex-direction: column;
-   background-color: white;
+   background-color: #FFC04C;
 }
 
 h1 {
@@ -27,3 +23,9 @@ h2 {
     text-align: center;
 
 }
+
+
+img {
+	align-content: center;
+}
+
