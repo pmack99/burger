@@ -1,12 +1,13 @@
 <div class="container">
 
 
-    <div class="row">
-        <div class="center col-sm-12">
-            <h1>Eat this tasty burger</h1>
-            
-            <div class="container txt-cntr">
-            <img src="https://png.pngtree.com/element_pic/16/11/30/ebc8e7b96219e826c99a5f877ffe50a9.jpg"  alt="Eat-Da-Burger App">
+    <div class="jumbotron vertical-center">
+        <div class="container">
+            <div class="center col-md-12">
+                <h1>Eat this tasty burger</h1>
+
+                <img src="https://png.pngtree.com/element_pic/16/11/30/ebc8e7b96219e826c99a5f877ffe50a9.jpg" alt="Eat-Da-Burger App">
+
             </div>
         </div>
     </div>
@@ -22,10 +23,10 @@
                     {{this.id}}
                     {{this.burger_name}}
 
-            <form action="/{{this.id}}?_method=PUT" method="POST"></form>
-            <input type="hidden" name="devoured" value="true">
-            <button type="submit" class="center-block">Devour It!</button>
-              
+                    <form action="/{{this.id}}?_method=PUT" method="POST"></form>
+                    <input type="hidden" name="devoured" value="true">
+                    <button type="submit" class="center-block">Devour It!</button>
+
 
                 </li>
                 {{/unless}}
@@ -33,7 +34,7 @@
             </ul>
 
         </div>
-    
+
         <div class="col-sm-6" id="eaten">
             <h2>Devoured burgers!</h2>
 
@@ -48,13 +49,8 @@
                 {{/each}}
             </ul>
         </div>
-    
-     </div>
-    
 
-    <br>
-    <br>
-<br>
+    </div>
     <br>
 
     <div class="row">
