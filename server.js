@@ -2,6 +2,9 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var router = require("./controllers/burgers_controller.js");
 var bodyParser = require("body-parser");
+var methodOverride = require('method-override');
+
+
 
 var PORT = process.env.PORT || 8000;
 
@@ -9,6 +12,10 @@ var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
+
+
+// override with the x-httpmethod overrride header in request
+app.use(methodOverride('method'))
 
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
