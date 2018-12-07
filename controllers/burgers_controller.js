@@ -15,39 +15,33 @@ router.get("/", function (req, res) {
 });
 
 
-// router.post("/", function (req, res) {
-//     burger.createBurger([
-//         "burger_name", "devoured"
-//     ], [
-//             req.body.burger_name, req.body.devoured
-//         ], function (result) {
-//             // Send back the ID of the new burger
-//             res.json({ id: result.insertId });
-           
-//         });
-// });
-
-router.post("/", function(req, res) {
+router.post("/", function (req, res) {
     burger.createBurger([
-      "burger_name"
+        "burger_name", "devoured"
     ], [
-      req.body.burger_name
-    ], function() {
-      res.redirect("/");
-    });
-  });
+            req.body.burger_name, req.body.devoured
+        ], function (result) {
+            // Send back the ID of the new burger
+            // res.json({ id: result.insertId });
+            res.redirect("/");
+           
+        });
+});
 
 
 
 router.put("/:id", function(req, res) {
-    var condition = 'id = ' + req.params.id;
-  
-    burger.devourBurger({
-      devoured: true
-    }, condition, function(data) {
-      res.redirect('/');
-    });
+  var condition = "id = " + req.params.id;
+
+  console.log("condition", condition);
+
+  burger.devourBurger({
+    devoured: req.body.devoured
+  }, condition, function() {
+    res.redirect("/");
   });
+});
+
 
   
   // Export routes for server.js to use.
