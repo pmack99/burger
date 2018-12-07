@@ -16,6 +16,7 @@ var burger = {
     orm.createBurger("burgers", objColVals, condition, function(res) {
       cb(res);
     });
+
   },
 
  
