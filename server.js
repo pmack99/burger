@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 
 // override with the x-httpmethod overrride header in request
-app.use(methodOverride('method'))
+app.use(methodOverride('_method'))
 
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
